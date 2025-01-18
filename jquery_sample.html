@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function test() {
+            console.log("call test function.");
+            // A => Apple
+            // const a  = document.getElementById("a");
+            // a.innerHTML = "Apple";
+            $("#a").html("Apple");
+        }
+        
+        function test2() {
+            //AとCを赤色にする
+            $(".red").css("color", "red").html("Apple");
+        }
+    </script>
+</head>
+<body>
+    <div id="a" class="red">A</div>
+    <div id="b">B</div>
+    <div id="c" class="red">C</div>
+    <button onclick="test()">test jQuery</button>
+    <button onclick="test2()">test2 jQuery</button>
+</body>
+</html>

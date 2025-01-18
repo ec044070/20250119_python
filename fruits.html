@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test() {
+            console.log("test function");
+
+            // const fruits1 = document.getElementById("fruits1");
+            // fruits1.style.color = "red";
+
+            // const fruits2 = document.getElementById("fruits2");
+            // fruits2.style.color = "yellow";
+
+            // const fruits = document.getElementsByTagName("li");
+            // console.log(fruits);
+            // // fruits配列をfor文で処理する
+            // for (let i = 0; i < fruits.length; i++){
+            //     fruits[i].style.color = "red";
+
+            const redFruits = document.getElementsByClassName("red-fruits")
+            for (let i = 0; i < redFruits.length; i++){
+                redFruits[i].style.color = "red";
+                redFruits[i].innerHTML = "DOM";
+            }     
+
+        }
+
+        function create(){
+            const fruits4 = document.createElement("li");
+            fruits4.innerHTML = "Lemon";
+
+            //任意の場所にlemonを追加する
+            const fruitsList = document.getElementById("fruits-list");
+            fruitsList.appendChild(fruits4)
+
+            console.log(fruits4);
+        }
+
+    </script>
+</head>
+<body>
+    <h1 class="red-fruits">Fruits</h1>
+    <ul id="fruits-list">
+        <li id="fruits1" class="red-fruits">Apple</li>
+        <li id="fruits2">Banana</li>
+        <li id="fruits3" class="red-fruits">Cherry</li>
+    </ul>
+    <button onclick="test()">test</button>
+    <button onclick="create()">create</button>
+</body>
+</html>

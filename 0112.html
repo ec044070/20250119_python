@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test() {
+            console.log("call test function.");
+        
+            const a = document.getElementById("a")
+            a.innerHTML = "Apple";
+        }
+
+        function test2() {
+            console.log("call test2 function.");
+
+            const b = document.getElementById("b")
+            b.innerHTML = "Banana";
+            b.style.color = "yellow";
+
+            // const yellow = document.getElementsByClassName("yellow")
+            // yellow[0].style.color = "yellow";
+        }
+
+    </script>
+</head>
+<body>
+    <div id="a">A</div>
+    <div id="b" class="yellow">B</div>
+    <div id="c">C</div>
+    <button onclick="test()">test</button>
+    <button onclick="test2()">test2</button>
+</body>
+</html>
