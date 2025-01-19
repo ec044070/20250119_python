@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits list</title>
+    
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/@designsupply/startify-ui/dist/startify-ui.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+
+    <script>
+        function add() {
+            console.log("add")
+
+            //テキストボックスの入力を取得する
+            const x = $("#name").val();
+            console.log(x);
+
+            //liタグをつくる。尚、$("li")はliタグを検索してしまうのでNG。
+            const li = $("<li>")
+            // li.innerHTML = "Banana";
+            // <li>Banana</li>
+            li.html(x);
+            //ulタグの最後にliタグを追加する
+            $("#list").append(li);
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1 class="su-title">Fruits list</h1>
+    <ul class="su-list-bullet" id="list">
+        <li>Apple</li>
+    </ul>
+    <form action="">
+        <input type="text" class="su-form-text-input" id="name">
+        <button type="button" class="su-button-primary" onclick="add()">Add</button>
+    </form>
+    
+
+
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/@designsupply/startify-ui/dist/startify-ui.min.js"
+  ></script>
+</body>
+</html>
