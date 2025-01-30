@@ -10,3 +10,4 @@ elif (diff := guess - secret) < 0:
 else:
     print("just rigth")
     
+
